@@ -1,15 +1,15 @@
 angular.module('sms', ['controllers', 'ngRoute', 'directive']).
     config(function ($routeProvider) {
         $routeProvider.
-            when('/home', {
-                templateUrl: 'views/home.html'
+            when('/login', {
+                templateUrl: 'views/partials/login.html'
             }).
             when('/profiles', {
-                templateUrl: 'views/partials/manageStudent.html'
+                templateUrl: 'views/partials/studentList.html'
             }).when('/new', {
                 templateUrl: 'views/partials/addStudent.html'
             }).otherwise({
-                redirectTo: '/home'
+                redirectTo: '/login'
             });
     });
 

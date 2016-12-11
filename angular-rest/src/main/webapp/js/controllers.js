@@ -1,6 +1,5 @@
 angular.module('controllers', ['studentService', 'underscore']).
     controller('studentCtrl', ['$scope', 'studentFactory', '_', function ($scope, studentFactory, _) {
-
         $scope.studentList = [];
         $scope.student = {};
         $scope.successMessage = false;
@@ -45,4 +44,9 @@ angular.module('controllers', ['studentService', 'underscore']).
                 });
         };
 
+    }]).controller('loginCtrl', ['$scope', '$location', function ($scope, $location) {
+        $scope.login = function (userDetails) {
+            console.log(userDetails);
+            $location.path("/profiles");
+        };
     }]);

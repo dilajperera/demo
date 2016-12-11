@@ -3,7 +3,7 @@ angular.module('directive', []).
         return {
             templateUrl: 'views/templates/std-details.html'
         };
-    }).directive('header', function () {
+    }).directive('headerTemplate', function () {
         return {
             templateUrl: 'views/templates/header.html'
         };
