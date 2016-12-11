@@ -1,11 +1,22 @@
-angular.module('controllers', [/*'ngResource'*/,/* 'ngCookies'*/'ngRoute','studentService', 'underscore'])
+angular.module('controllers', ['ngResource', 'ngCookies', 'ngRoute', 'services', 'underscore'])
     .controller('mainCtrl', ['$scope', '$route', function ($scope, $route) {
         $scope.$route = $route;
     }])
-    .controller('loginCtrl', ['$scope', '$location',/* '$resource', '$http', '$httpParamSerializer', '$cookies',*/
-        function ($scope, $location/*, $resource, $http, $httpParamSerializer, $cookies*/) {
+    .controller('loginCtrl', ['$scope', '$location', '$http', '$cookies', 'authorizationService',
+        function ($scope, $location, $http, $cookies, authorizationService) {
 
             $scope.login = function (userDetails) {
-                 $location.path("/profiles");
+
+                //need to remove
+                $cookies.put('access_token', 'access_token_123');
+
+                $location.path('/profiles');
+                authorizationService.requestAccessToken(userDetails).then(function (data) {
+                    $http.defaults.headers.common.Authorization = 'Bearer ' + data.data.access_token;
+                    // $cookies.put("access_token", data.data.access_token);
+                }, function (error) {
+                    console.log('Authentication Fail' + error.data);
+                    $cookies.put('access_token', 'access_token_123');
+                });
             };
-    }]);
+   }]);

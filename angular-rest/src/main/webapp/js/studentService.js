@@ -1,17 +1,19 @@
 angular.
-    module('studentService', []).
-    factory('studentFactory', ['$http', '$q', function ($http, $q) {
+    module('services').
+    factory('studentFactory', ['$http', '$q','$cookies', 'authorizationService', function ($http, $q, $cookies, authorizationService) {
 
         function addStudent(student) {
             var deferred = $q.defer();
+            var accessToken = authorizationService.getAccessToken();
+            console.log(accessToken);
             $http({
                 method: 'POST',
                 url: 'students',
                 data: student
-            }).success(function (data) {
-                deferred.resolve(data);
-            }).error(function (error) {
-                deferred.reject(error);
+            }).then(function success(response) {
+                deferred.resolve(response.data);
+            }, function error(response) {
+                deferred.reject(response);
             });
             return deferred.promise;
         };
@@ -21,10 +23,10 @@ angular.
             $http({
                 method: 'GET',
                 url: 'students'
-            }).success(function (data) {
-                deferred.resolve(data);
-            }).error(function (error) {
-                deferred.reject(error);
+            }).then(function success(response) {
+                deferred.resolve(response.data);
+            }, function error(response) {
+                deferred.reject(response);
             });
             return deferred.promise;
         };
@@ -35,10 +37,10 @@ angular.
                 method: 'DELETE',
                 url: 'students/' + student.id,
                 data: student
-            }).success(function (data) {
-                deferred.resolve(data);
-            }).error(function (error) {
-                deferred.reject(error);
+            }).then(function success(response) {
+                deferred.resolve(response.data);
+            }, function error(response) {
+                deferred.reject(response);
             });
             return deferred.promise;
         };

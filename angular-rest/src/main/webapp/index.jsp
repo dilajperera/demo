@@ -7,13 +7,17 @@
     <link href="css/styles.css" rel="stylesheet">
     <script src="lib/angular/angular.js"></script>
     <script src="lib/angular/angular-route.js"></script>
+    <script src="lib/angular/angular-resource.js"></script>
+    <script src="lib/angular/angular-cookies.js"></script>
+
     <script src="lib/underscore/underscore.js"></script>
     <script src="lib/underscore/angular-underscore-module.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="js/authorizationService.js"></script>
+    <script src="js/studentService.js"></script>
     <script src="js/mainController.js"></script>
     <script src="js/studentController.js"></script>
-    <script src="js/services.js"></script>
-    <script src="js/directives.js"></script>
 </head>
 
 <body>
