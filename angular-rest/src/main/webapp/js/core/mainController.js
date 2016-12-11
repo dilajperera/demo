@@ -1,4 +1,4 @@
-angular.module('controllers', ['ngResource', 'ngCookies', 'ngRoute', 'services', 'underscore'])
+angular.module('core')
     .controller('mainCtrl', ['$scope', '$route', function ($scope, $route) {
         $scope.$route = $route;
     }])

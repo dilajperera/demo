@@ -1,5 +1,5 @@
 angular.
-    module('services', ['ngResource', 'ngCookies', 'ngRoute']).
+    module('core').
     factory('authorizationService', ['$http', '$q', '$cookies', '$httpParamSerializer',
         function ($http, $q, $cookies, $httpParamSerializer) {
 

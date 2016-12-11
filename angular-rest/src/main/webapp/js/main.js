@@ -1,4 +1,4 @@
-angular.module('sms', ['controllers', 'ngRoute', 'directive']).
+angular.module('sms', ['ngRoute', 'ngResource', 'ngCookies', 'core','student']).
     config(function ($routeProvider) {
         $routeProvider.
             when('/login', {

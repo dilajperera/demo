@@ -1,5 +1,5 @@
 angular.
-    module('services').
+    module('student').
     factory('studentFactory', ['$http', '$q','$cookies', 'authorizationService', function ($http, $q, $cookies, authorizationService) {
 
         function addStudent(student) {

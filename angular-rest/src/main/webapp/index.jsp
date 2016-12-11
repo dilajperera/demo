@@ -9,27 +9,19 @@
     <script src="lib/angular/angular-route.js"></script>
     <script src="lib/angular/angular-resource.js"></script>
     <script src="lib/angular/angular-cookies.js"></script>
-
     <script src="lib/underscore/underscore.js"></script>
     <script src="lib/underscore/angular-underscore-module.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/directives.js"></script>
-    <script src="js/authorizationService.js"></script>
-    <script src="js/studentService.js"></script>
-    <script src="js/mainController.js"></script>
-    <script src="js/studentController.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/core/core.js"></script>
+    <script src="js/core/authorizationService.js"></script>
+    <script src="js/core/mainController.js"></script>
+    <script src="js/student/student.js"></script>
+    <script src="js/student/studentController.js"></script>
+    <script src="js/student/studentService.js"></script>
 </head>
 
 <body>
-<%--
-<div class="col-md-12" id="content">
-    <div class="panel">
-        <div class="panel-body" style="padding:35px">
-            <ng-view></ng-view>
-        </div>
-    </div>
-</div>
---%>
+
 <ng-view></ng-view>
 
 <footer>

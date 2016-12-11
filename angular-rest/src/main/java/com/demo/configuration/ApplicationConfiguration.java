@@ -58,6 +58,8 @@ public class ApplicationConfiguration extends WebMvcConfigurerAdapter {
         registry.addResourceHandler("/css/*").addResourceLocations("/css/");
 
         registry.addResourceHandler("/js/*").addResourceLocations("/js/");
+        registry.addResourceHandler("/js/core/*").addResourceLocations("/js/core/");
+        registry.addResourceHandler("/js/student/*").addResourceLocations("/js/student/");
         registry.addResourceHandler("/views/*").addResourceLocations("/views/");
         registry.addResourceHandler("/views/partials/*").addResourceLocations("/views/partials/");
         registry.addResourceHandler("/views/templates/*").addResourceLocations("/views/templates/");

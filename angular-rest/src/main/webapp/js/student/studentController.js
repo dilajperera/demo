@@ -1,4 +1,4 @@
-angular.module('controllers').
+angular.module('student').
     controller('studentCtrl', ['$scope', 'studentFactory', '_', function ($scope, studentFactory, _) {
         $scope.studentList = [];
         $scope.student = {};
