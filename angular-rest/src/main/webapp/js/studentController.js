@@ -1,4 +1,4 @@
-angular.module('controllers', ['studentService', 'underscore']).
+angular.module('controllers').
     controller('studentCtrl', ['$scope', 'studentFactory', '_', function ($scope, studentFactory, _) {
         $scope.studentList = [];
         $scope.student = {};
@@ -19,10 +19,6 @@ angular.module('controllers', ['studentService', 'underscore']).
             studentFactory.getAllStudents().then(function (students) {
                     $scope.studentList = students;
                     $scope.showEditPanel = false;
-                    if (students.length > 0) {
-                        $scope.student = students[0];
-                        $scope.showEditPanel = true;
-                    }
                 },
                 function (error) {
                     console.log('students details can not be loaded' + error);
@@ -43,10 +39,4 @@ angular.module('controllers', ['studentService', 'underscore']).
                     console.log('students details can not be saved' + error);
                 });
         };
-
-    }]).controller('loginCtrl', ['$scope', '$location', function ($scope, $location) {
-        $scope.login = function (userDetails) {
-            console.log(userDetails);
-            $location.path("/profiles");
-        };
-    }]);
+ }]);

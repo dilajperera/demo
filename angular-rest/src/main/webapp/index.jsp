@@ -10,7 +10,8 @@
     <script src="lib/underscore/underscore.js"></script>
     <script src="lib/underscore/angular-underscore-module.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/controllers.js"></script>
+    <script src="js/mainController.js"></script>
+    <script src="js/studentController.js"></script>
     <script src="js/services.js"></script>
     <script src="js/directives.js"></script>
 </head>

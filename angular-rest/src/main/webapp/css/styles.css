@@ -86,18 +86,30 @@ h3.highlight  {
   	color:#ffffff;
   	border-radius:0;
 }
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    background-color:#5cbeea;
+    color:#ffffff;
+    border-radius:0;
+}
+
 .navbar-nav > li > a {
   	color:#fff;
   	padding-left:20px;
   	padding-right:20px;
   	border-left:1px solid #66BBCC;
 }
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #ffffff;
+}
+
 .navbar-nav > li:last-child > a {
   	border-right:1px solid #66BBCC;
 }
 
 .navbar-nav li a:hover {
-  	background-color:#66BBCC;
+    background-color:#5cbeea;
 }
 
 .navbar-nav > .open > a, .navbar-nav > .open > a:hover, .navbar-nav > .open > a:focus {
